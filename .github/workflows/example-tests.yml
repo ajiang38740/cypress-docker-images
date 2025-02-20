@@ -1,9 +1,9 @@
-name: Example Tests
+name: test-ubuntu-2404-arm
 # This workflow tests examples from the examples directory of this repo.
 
 on:
-  schedule:
-    - cron: "*/10 * * * *"
+  repository_dispatch:
+    types: webhook
 
 jobs:
   example:
