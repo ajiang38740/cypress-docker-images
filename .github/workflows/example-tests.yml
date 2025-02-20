@@ -2,11 +2,8 @@ name: Example Tests
 # This workflow tests examples from the examples directory of this repo.
 
 on:
-  push:
-    paths:
-      - examples/**
-  pull_request:
-  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"
 
 jobs:
   example:
